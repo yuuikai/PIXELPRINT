@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Define styles for the body */
+body {
+    font-family: 'Poppins', sans-serif;
+
+    margin: 0;
+    padding: 0;
+}
+
+/* Define styles for the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    color: #fff;
+}
+
+.navbar a {
+    color: #fff;
+    margin-right: 3.5rem;
+    text-decoration: none;
+}
+
+.navbar form {
+    display: flex;
+    margin-left: 20px;
+}
+
+.navbar input[type="text"] {
+    padding: 12px 20px;
+    margin-right: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+}
+
+.navbar input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.navbar .menu {
+    padding-left: 2rem;
+}
+
+.right-menu {
+    display: flex;
+}
+
+
+.logout-btn {
+        margin-left: 2.5rem;
+        border: 2px solid #046ec4;
+        border-radius: 5px;
+        color: black;
+        padding: 1rem 1.5rem;
+        font-size: 16px;
+        cursor: pointer;
+}
+
+.logout-btn:hover {
+    border: 2px solid #046ec4;
+    background-color: #046ec4;
+    color: black;
+}
+
+
+/* Define styles for the hero section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    background-image: linear-gradient(to right, #f9d423, #ff4e50);
+    color: #fff;
+}
+
+.hero-section img {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.hero-section-text {
+    text-align: center;
+    margin-left: 20px;
+}
+
+.hero-section h1 {
+    font-size: 40px;
+    margin-bottom: -10px;
+}
+
+.hero-section p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.hero-section-button {
+    background-color: white;
+    color: rgb(92, 92, 92);
+    font-weight: 400;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.hero-section-button:hover{
+    color: #ff4e50;
+}
+
+/* Define styles for the featured products section */
+.featured-products-section {
+    padding: 50px;
+}
+
+.featured-products-section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.featured-products-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.featured-product {
+    width: 30%;
+    text-align: center;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.featured-product img {
+    width: 100%;
+    max-width: 300px;
+   
+}
+
+.btn-add {
+    margin-right: 1rem;
+    display: flex;
+    width: 70px;
+    height: 40px;
+    padding: 0px 15px;
+    border-radius: 3px;
+    border : 2px #ff4e50 solid;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-style: none;
+}
+.btn-add svg {
+    margin-right: 8px;
+}
+
+.btn-add p {
+    color: #ff4e50;
+}
+
+
+.btn-erase {
+    display: flex;
+    width: 70px;
+    height: 40px;
+    border-radius: 3px;
+    border : 2px #f82326 solid;
+    background-color: #f82326;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-style: none;
+}
+
+
+.btn-area {
+    margin-top: 1.8rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+.about-us-section {
+    padding: 2rem;
+    background-color: black;
+    color: white;
+}
+
+

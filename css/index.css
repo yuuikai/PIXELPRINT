@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-container{
+    width: 370px;
+    height: 420px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    background: #000;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+
+.login-container h2{
+    align-content: center;
+    margin-bottom: 2rem;
+}
+
+.login-container label{
+    display: block;
+}
+
+.login-container div{
+    margin-bottom: 20px;
+}
+
+.login-container input[type="text"], input[type="password"]{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ffff;
+    background: transparent;
+    color: #ffff;
+    height: 40px;
+}
+
+.login-container input[type="submit"]{
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 40px;
+    background-image: linear-gradient(to right, #f9d423, #ff4e50);
+    color: #ffff;
+    
+}
+.login-container input[type="submit"]:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 10px #696969;
+}
+
+.sub {
+    margin-top: 1.6rem;
+    font-size: 12px;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: #ff4e50;
+    font-size: 12px;
+}
+
+a:hover{
+    color: #d3d3d3;
+    
+}
+
+
