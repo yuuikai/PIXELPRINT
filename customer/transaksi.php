@@ -57,15 +57,16 @@
          if ($result->num_rows > 0) {
              echo "<table class='table table-bordered'>
              <tr>
-             <th>Kode</th>
+             <th>Kode Transaksi</th>
              <th>Produk</th>
              <th>Harga</th>
              <th>Jumlah</th>
+             <th>Total</th>
              <th>Status</th>
              </tr>";
              // output data of each row
              while($row = $result->fetch_assoc()) {
-                 echo "<tr><td>" . $row["kodebarang"]. "</td><td>" . $row["namabarang"]. "</td><td>" . $row["harga"]. "</td><td>" . $row["jumlah"]. "</td><td>" . $row["stok"]. "</td></tr>";
+                 echo "<tr><td>" . $row["kodetransaksi"]. "</td><td>" . $row["namabarang"]. "</td><td>" . $row["harga"]. "</td><td>" . $row["jumlah"]. "</td><td>" . $row["harga"] * $row["jumlah"]. "</td><td>" . $row["status"]. "</td></tr>";
              }
              echo "</table>";
          } else {
