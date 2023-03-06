@@ -59,6 +59,8 @@
         <input type="text" name="namabarang" value="<?= $products['namabarang'];?>" required>
         <label for="harga">Harga</label>
         <input type="number" name="harga" value="<?= $products['harga'];?>" min="1" step="any" placeholder="" required>
+        <label for="deskripsi">Deskripsi</label>
+        <input type="text" name="deskripsi" value="<?= $products['deskripsi'];?>" required>
 
         <button type="submit" name="tambah">Update</button>
     </form>

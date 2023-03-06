@@ -13,7 +13,7 @@ $no = substr($kodeBarang, -3, 3);
 $newkodebarang = $char . sprintf("%03s", $no);
 $namabarang = $_POST['namabarang'];
 $harga = $_POST['harga'];
-$stok = $_POST['stok'];
+$deskripsi = $_POST['deskripsi'];
 $img = $_FILES['img']['name'];
 $img_tmp = $_FILES['img']['tmp_name'];
 $sql = "SELECT kodebarang, namabarang, harga, stok FROM barang";
@@ -22,7 +22,7 @@ $sql = "SELECT kodebarang, namabarang, harga, stok FROM barang";
 $id = $_GET['id'];
 
 
-if (mysqli_query($koneksi,"UPDATE barang SET namabarang='$namabarang', harga='$harga', stok='$stok' where id='$id'")
+if (mysqli_query($koneksi,"UPDATE barang SET namabarang='$namabarang', harga='$harga', deskripsi ='$deskripsi' where id='$id'")
 ) {
     header("location:admin/dashboard.php?pesan=update-barang-berhasil");
 }

@@ -55,6 +55,8 @@
 
         <?php
          if ($result->num_rows > 0) {
+
+
              echo "<table class='table table-bordered'>
              <tr>
              <th>Kode Transaksi</th>
@@ -64,9 +66,22 @@
              <th>Total</th>
              <th>Status</th>
              </tr>";
+
+
+
              // output data of each row
              while($row = $result->fetch_assoc()) {
-                 echo "<tr><td>" . $row["kodetransaksi"]. "</td><td>" . $row["namabarang"]. "</td><td>" . $row["harga"]. "</td><td>" . $row["jumlah"]. "</td><td>" . $row["harga"] * $row["jumlah"]. "</td><td>" . $row["status"]. "</td></tr>";
+
+                $status = $row["status"];
+                $statustext = "";
+                if($status == 0) {
+                  $statustext = "Belum dikonfirmasi";
+                } else if($status == 1){
+                  $statustext = "Pesanan ditolak";
+                } else if($status == 2){
+                  $statustext = "Telah dikonfirmasi";
+                }
+                 echo "<tr><td>" . $row["kodetransaksi"]. "</td><td>" . $row["namabarang"]. "</td><td>" . $row["harga"]. "</td><td>" . $row["jumlah"]. "</td><td>" . $row["harga"] * $row["jumlah"]. "</td><td>" . $statustext. "</td></tr>";
              }
              echo "</table>";
          } else {
