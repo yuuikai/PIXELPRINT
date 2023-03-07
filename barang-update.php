@@ -24,7 +24,7 @@ $id = $_GET['id'];
 
 if (mysqli_query($koneksi,"UPDATE barang SET namabarang='$namabarang', harga='$harga', deskripsi ='$deskripsi' where id='$id'")
 ) {
-    header("location:admin/dashboard.php?pesan=update-barang-berhasil");
+    header("location:admin/katalog-barang.php?pesan=update-barang-berhasil");
 }
 
 

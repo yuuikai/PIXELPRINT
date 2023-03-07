@@ -42,7 +42,7 @@
     <main>
     <div class="order-form-container">
     <form action="../barang-aksi.php" method="post" >
-        <h2>Order Form</h2>
+        <h2>Tambah Barang</h2>
         <label for="namabarang">Nama Barang</label>
         <input type="text" name="namabarang" required>
         <label for="harga">Harga</label>

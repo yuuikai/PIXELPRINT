@@ -55,6 +55,7 @@
     <div class="order-form-container">
     <form action="../barang-update.php?id=<?= $products['id']?>" method="post" >
         <h2>Order Form</h2>
+        <img style="border-radius : 50%;  margin-bottom :2rem;" src="https://via.placeholder.com/80">
         <label for="namabarang">Nama Barang</label>
         <input type="text" name="namabarang" value="<?= $products['namabarang'];?>" required>
         <label for="harga">Harga</label>

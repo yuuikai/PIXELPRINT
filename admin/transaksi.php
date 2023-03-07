@@ -38,6 +38,7 @@
         $id = $_GET["id"];
         $sql = "UPDATE transaksi SET status = 2 WHERE kodetransaksi='$id'";
 
+
         if (mysqli_query($koneksi, $sql)) {
             header("location:transaksi.php?p=Berhasil_melakukan_konfirmasi_transaksi");
         }
@@ -72,12 +73,13 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main class="p-5">
 
         <?php
 
         if ($result->num_rows > 0) { ?>
             <table class='table table-bordered'>
+                <thead class='thead-light'>
                 <tr>
                     <th>Kode</th>
                     <th>Produk</th>
@@ -87,7 +89,7 @@
                     <th>Pembeli</th>
                     <th>Konfirmasi</th>
                 </tr>
-                <?php while ($row = $result->fetch_assoc()): {
+                <?php while ($row = $result->fetch_assoc()) {
 
                     $kodebarang2 = $row["kodebarang"];
                     $kodetransaksi2 = $row["kodetransaksi"]; ?>
@@ -95,9 +97,9 @@
                     <tr>
                         <td><?= $row["kodetransaksi"] ?></td>
                         <td><?= $row["namabarang"] ?> </td>
-                        <td><?= $row["harga"] ?> </td>
+                        <td><?= number_format( $row["harga"]) ?> </td>
                         <td> <?= $row["jumlah"] ?> </td>
-                        <td> <?= $row["harga"] * $row["jumlah"] ?> </td>
+                        <td> <?= number_format($row["harga"] * $row["jumlah"]) ?> </td>
                         <td> <?= $row["name"] ?></td>
                         <td>
 
@@ -118,15 +120,16 @@
                             </form>
                         </td>
                     </tr>
-                <?php }
-                endwhile;
-                ?>
+
+
+                <?php } ?>
+
+                </thead>
             </table>
         <?php } else {
-            echo "Belum ada pesanan";
+            echo "0 results";
         }
 
-        
 
 
 
@@ -140,13 +143,20 @@
 
 
 
-        <section id="aboutus" class="about-us-section">
+        
+    </main>
+
+    <section id="aboutus" class="about-us-section">
             <h2 class="sub-title">About Us</h2>
             <p>Kami adalah penyedia printer bekas paling terpercaya di Indonesia <br> yang juga memiliki dukungan sistem dan customer service yang baik.</p>
             <p>Copyright ©2023 PixelPrint</p>
         </section>
-    </main>
 
+    <script>
+        $('#myModal').on('shown.bs.modal', function() {
+            $('#myInput').trigger('focus')
+        })
+    </script>
 </body>
 
 </html>

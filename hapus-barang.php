@@ -5,7 +5,7 @@ include 'koneksi.php';
 $id = $_GET['id'];
 mysqli_query($koneksi, "DELETE FROM barang WHERE id='$id'");
 
-header("location:admin/dashboard.php");
+header("location:admin/katalog-barang.php");
 
 
 ?>

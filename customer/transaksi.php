@@ -51,13 +51,13 @@
             </div>
         </nav>
     </header>
-    <main>
+    <main class="p-5">
 
         <?php
          if ($result->num_rows > 0) {
 
-
              echo "<table class='table table-bordered'>
+             <thead class='thead-light'>
              <tr>
              <th>Kode Transaksi</th>
              <th>Produk</th>
@@ -66,36 +66,47 @@
              <th>Total</th>
              <th>Status</th>
              </tr>";
-
-
-
              // output data of each row
              while($row = $result->fetch_assoc()) {
 
                 $status = $row["status"];
                 $statustext = "";
                 if($status == 0) {
-                  $statustext = "Belum dikonfirmasi";
+                  $statustext = "<button class='btn btn-light' disabled>Belum Dikonfirmasi</button>";
                 } else if($status == 1){
-                  $statustext = "Pesanan ditolak";
+                  $statustext = "<button style='color:white;' class='btn btn-danger' disabled>Pesanan Ditolak</button>";
                 } else if($status == 2){
-                  $statustext = "Telah dikonfirmasi";
+                  $statustext = "<button style='color:white;' class='btn btn-success' disabled>Sudah Dikonfirmasi</button>";
                 }
-                 echo "<tr><td>" . $row["kodetransaksi"]. "</td><td>" . $row["namabarang"]. "</td><td>" . $row["harga"]. "</td><td>" . $row["jumlah"]. "</td><td>" . $row["harga"] * $row["jumlah"]. "</td><td>" . $statustext. "</td></tr>";
+
+
+                 echo "<tr>
+                 
+                 <td>" . $row["kodetransaksi"]. "</td>
+                 <td>" . $row["namabarang"]. "</td>
+                 <td>" . number_format($row["harga"]) . "</td>
+                 <td>" . $row["jumlah"]. "</td>
+                 <td>" . number_format($row["harga"] * $row["jumlah"]) . "</td>
+                 
+                 
+                 <td>" . $statustext. "</td></tr>";
              }
-             echo "</table>";
+             echo "
+             </thead>
+             </table>";
          } else {
              echo "0 results";
          }
          $koneksi->close();
         ?>
 
-        <section id="aboutus" class="about-us-section">
+    </main>
+
+    <section id="aboutus" class="about-us-section">
             <h2 class="sub-title">About Us</h2>
             <p>Kami adalah penyedia printer bekas paling terpercaya di Indonesia <br> yang juga memiliki dukungan sistem dan customer service yang baik.</p>
             <p>Copyright ©2023 PixelPrint</p>
         </section>
-    </main>
 </body>
 
 </html>
